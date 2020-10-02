@@ -42,7 +42,7 @@ export function AlertDialogSlide(props) {
 
         <>
             <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-                Slide in alert dialog
+                Slide in alert dialog soumen
       </Button>
             <Dialog
                 open={open}
