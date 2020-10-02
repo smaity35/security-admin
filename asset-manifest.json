@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.163b1cc9.chunk.css",
-    "main.js": "/static/js/main.f34679ea.chunk.js",
-    "main.js.map": "/static/js/main.f34679ea.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.02157185.js",
-    "runtime-main.js.map": "/static/js/runtime-main.02157185.js.map",
-    "static/js/2.b62b6a19.chunk.js": "/static/js/2.b62b6a19.chunk.js",
-    "static/js/2.b62b6a19.chunk.js.map": "/static/js/2.b62b6a19.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.fa8e30c3723bd5bf7c4f3a4da6c27f25.js": "/precache-manifest.fa8e30c3723bd5bf7c4f3a4da6c27f25.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.163b1cc9.chunk.css.map": "/static/css/main.163b1cc9.chunk.css.map",
-    "static/js/2.b62b6a19.chunk.js.LICENSE.txt": "/static/js/2.b62b6a19.chunk.js.LICENSE.txt",
-    "static/media/master.scss": "/static/media/LoginBanner.d1bf3ed8.jpg",
-    "static/media/logo.png": "/static/media/logo.0ae92f8d.png"
+    "main.css": "/security-admin/static/css/main.cb0b2d2a.chunk.css",
+    "main.js": "/security-admin/static/js/main.ad70c9a3.chunk.js",
+    "main.js.map": "/security-admin/static/js/main.ad70c9a3.chunk.js.map",
+    "runtime-main.js": "/security-admin/static/js/runtime-main.eda3ef7e.js",
+    "runtime-main.js.map": "/security-admin/static/js/runtime-main.eda3ef7e.js.map",
+    "static/js/2.b62b6a19.chunk.js": "/security-admin/static/js/2.b62b6a19.chunk.js",
+    "static/js/2.b62b6a19.chunk.js.map": "/security-admin/static/js/2.b62b6a19.chunk.js.map",
+    "index.html": "/security-admin/index.html",
+    "precache-manifest.7c38443721635a1c5e7055b5a1c24f24.js": "/security-admin/precache-manifest.7c38443721635a1c5e7055b5a1c24f24.js",
+    "service-worker.js": "/security-admin/service-worker.js",
+    "static/css/main.cb0b2d2a.chunk.css.map": "/security-admin/static/css/main.cb0b2d2a.chunk.css.map",
+    "static/js/2.b62b6a19.chunk.js.LICENSE.txt": "/security-admin/static/js/2.b62b6a19.chunk.js.LICENSE.txt",
+    "static/media/master.scss": "/security-admin/static/media/LoginBanner.d1bf3ed8.jpg",
+    "static/media/logo.png": "/security-admin/static/media/logo.0ae92f8d.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.02157185.js",
+    "static/js/runtime-main.eda3ef7e.js",
     "static/js/2.b62b6a19.chunk.js",
-    "static/css/main.163b1cc9.chunk.css",
-    "static/js/main.f34679ea.chunk.js"
+    "static/css/main.cb0b2d2a.chunk.css",
+    "static/js/main.ad70c9a3.chunk.js"
   ]
 }
