@@ -5,72 +5,9 @@ import HeaderComponent from '../SharedComponent/HeaderComponent'
 
 
 
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Slide from '@material-ui/core/Slide';
-
-const Transition = React.forwardRef(function Transition(props, ref) {
-    return <Slide direction="up" ref={ref} {...props} />;
-});
-
-export function AlertDialogSlide(props) {
-    const [open, setOpen] = React.useState(false);
-    var opDialogsInstructions = props.isDialogOpen;
-    if (opDialogsInstructions === true) {
-        setOpen(true)
-    } else {
-        return false
-    }
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
-    
-
-    const handleClose = () => {
-        setOpen(false);
-    };
+import MainModal from '../ModalComponent/MainModal';
 
 
-
-    return (
-
-        <>
-            <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-                Slide in alert dialog soumen
-      </Button>
-            <Dialog
-                open={open}
-                TransitionComponent={Transition}
-                keepMounted
-                onClose={handleClose}
-                aria-labelledby="alert-dialog-slide-title"
-                aria-describedby="alert-dialog-slide-description"
-            >
-                <DialogTitle id="alert-dialog-slide-title">{"Use Google's location service?"}</DialogTitle>
-                <DialogContent>
-                    <DialogContentText id="alert-dialog-slide-description">
-                        Let Google help apps determine location. This means sending anonymous location data to
-                        Google, even when no apps are running.
-          </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClose} color="primary">
-                        Disagree
-          </Button>
-                    <Button onClick={handleClose} color="primary">
-                        Agree
-          </Button>
-                </DialogActions>
-            </Dialog>
-        </>
-    );
-}
 
 
 export default class HomePageComponent extends Component {
@@ -80,11 +17,17 @@ export default class HomePageComponent extends Component {
             isModalOpen: false,
         }
     }
-
-
+    sendData() {
+        console.warn('tag', 'click')
+        this.setState({ isModalOpen: true });
+    }
+    closeModal() {
+        this.setState({ isModalOpen: false })
+    }
     render() {
         return (
             <>
+                <MainModal isDialogOpen={this.state.isModalOpen} closeModal={() => this.closeModal()} />
 
                 <AsideComponent />
 
@@ -124,7 +67,7 @@ export default class HomePageComponent extends Component {
                     </div>
 
 
-                    <AlertDialogSlide isDialogOpen={this.state.isModalOpen} />
+
 
                     <div className="content min-vh-100">
                         <div className="animated fadeIn">
@@ -142,7 +85,7 @@ export default class HomePageComponent extends Component {
                                     </div>
                                 </div>
                                 <div className="col-auto">
-                                    <button className="btn btn-primary" onClick={() => this.setState({ isModalOpen: true })}>
+                                    <button className="btn btn-primary" onClick={() => this.sendData()}>
                                         <i className="fa fa-add"></i> New Entry
                                      </button>
                                 </div>
