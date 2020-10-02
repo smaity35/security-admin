@@ -1,0 +1,14 @@
+ @import "~bootstrap/scss/bootstrap";
+
+//  @import "../src/assets/dist/css/cs-skin-elastic.css";
+ @import "../src/assets/dist/css/style.css";
+
+
+ .right-0{
+   right: 0 !important;
+ }
+ .sufee-login{
+   background-image: url('../src/assets/Images/LoginBanner.jpg');
+   background-position: center;
+   background-size: cover;
+ }
