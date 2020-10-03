@@ -14,9 +14,10 @@ function App() {
     <>
       <Router>
         <Switch>
-           <Route path="/" exact><LoginPageComponent /></Route>
-          <Route path="/login" exact><LoginPageComponent /></Route>
-          <Route path="/home" exact><HomePageComponent /></Route>
+
+          <Route path="/login"  ><LoginPageComponent /></Route>
+          <Route path="/home"  ><HomePageComponent /></Route>
+          <Route path="/"  ><LoginPageComponent /></Route>
         </Switch>
       </Router>
     </>
