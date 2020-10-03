@@ -5,7 +5,7 @@ export default class HeaderComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isBodyClassOpen: false
+            isBodyClassOpen: true
         }
     }
 
