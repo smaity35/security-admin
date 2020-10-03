@@ -14,7 +14,7 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route path="/" exact><LoginPageComponent /></Route>
+           <Route path="/" exact><LoginPageComponent /></Route>
           <Route path="/login" exact><LoginPageComponent /></Route>
           <Route path="/home" exact><HomePageComponent /></Route>
         </Switch>

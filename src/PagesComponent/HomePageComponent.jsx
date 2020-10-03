@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import ImagesPath from '../assets/ImagesPath'
 import AsideComponent from '../SharedComponent/AsideComponent'
 import HeaderComponent from '../SharedComponent/HeaderComponent'
+import Button from '@material-ui/core/Button';
 
 
 
@@ -15,19 +15,25 @@ export default class HomePageComponent extends Component {
         super(props);
         this.state = {
             isModalOpen: false,
+            modalType: '',
         }
     }
     sendData() {
-        console.warn('tag', 'click')
         this.setState({ isModalOpen: true });
     }
     closeModal() {
-        this.setState({ isModalOpen: false })
+        this.setState({ isModalOpen: false });
+        this.setState({ modalType: '' });
     }
     render() {
+        console.log('tag***********', this.state.modalType);
         return (
             <>
-                <MainModal isDialogOpen={this.state.isModalOpen} closeModal={() => this.closeModal()} />
+                <MainModal
+                    modalType={this.state.modalType}
+                    isDialogOpen={this.state.isModalOpen}
+                    closeModal={() => this.closeModal()}
+                />
 
                 <AsideComponent />
 
@@ -85,8 +91,12 @@ export default class HomePageComponent extends Component {
                                     </div>
                                 </div>
                                 <div className="col-auto">
-                                    <button className="btn btn-primary" onClick={() => this.sendData()}>
-                                        <i className="fa fa-add"></i> New Entry
+                                    <button className="btn btn-primary"
+                                        onClick={() => { this.sendData(); this.setState({ modalType: 'newEntry' }) }}
+                                    >
+                                        <span className="material-icons align-middle">
+                                            create
+                                        </span> New Entry
                                      </button>
                                 </div>
                             </div>
@@ -97,7 +107,7 @@ export default class HomePageComponent extends Component {
                                         <div className="card-header">
                                             <strong className="card-title">Visiter Table</strong>
                                         </div>
-                                        <div className="table-stats order-table ov-h">
+                                        <div className="table-stats table-hover order-table ov-h">
                                             <table className="table ">
                                                 <thead>
                                                     <tr>
@@ -118,14 +128,20 @@ export default class HomePageComponent extends Component {
                                                         <td className="serial">1.</td>
                                                         <td>02/09/2020</td>
                                                         <td>05:10PM</td>
-                                                        <td><span className="name">Jhone Stanley</span> </td>
+                                                        <td><span className="name">Rahul Sen</span> </td>
                                                         <td><span className="product">Doctor</span> </td>
                                                         <td><span className="count">D Block</span></td>
                                                         <td><span className="count">Jamuna</span></td>
                                                         <td><span className="count">D/2/6</span></td>
                                                         <td><span className="count text-danger">Blocked</span></td>
                                                         <td>
-                                                            <button type="button" className="btn btn-primary">View</button>
+                                                            <Button color="primary"
+                                                                onClick={() => { this.sendData(); this.setState({ modalType: 'entryDetails' }) }}
+                                                            >
+                                                                <span className="material-icons">
+                                                                    visibility
+                                                                </span>
+                                                            </Button>
                                                         </td>
                                                     </tr>
                                                     {[0, 1, 2, 3, 4, 5, 6].map((list, index) => (
@@ -140,7 +156,11 @@ export default class HomePageComponent extends Component {
                                                             <td><span className="count">A/12/2</span></td>
                                                             <td><span className="count text-success">Pass</span></td>
                                                             <td>
-                                                                <button type="button" className="btn btn-primary">View</button>
+                                                                <Button color="primary" onClick={() => { this.sendData(); this.setState({ modalType: 'entryDetails' }) }} >
+                                                                    <span className="material-icons">
+                                                                        visibility
+                                                                    </span>
+                                                                </Button>
                                                             </td>
                                                         </tr>
                                                     ))}
