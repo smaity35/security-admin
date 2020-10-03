@@ -38,7 +38,7 @@ const MainModal = (props) => {
                     <hr />
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={() => props.closeModal()} color="primary">
+                    <Button onClick={() => props.closeModal()} color="secondary">
                         Close
                     </Button>
                 </DialogActions>
