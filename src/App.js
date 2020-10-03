@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link, HashRouter
 } from "react-router-dom";
 import LoginPageComponent from './PagesComponent/LoginPageComponent';
 import HomePageComponent from './PagesComponent/HomePageComponent';
@@ -12,14 +12,13 @@ import HomePageComponent from './PagesComponent/HomePageComponent';
 function App() {
   return (
     <>
-      <Router>
-        <Switch>
+      <HashRouter basename='/'>
+        <Route path="/" exact ><LoginPageComponent /></Route>
+        <Route path="/login"  ><LoginPageComponent /></Route>
+        <Route path="/home"  ><HomePageComponent /></Route>
 
-          <Route path="/login"  ><LoginPageComponent /></Route>
-          <Route path="/home"  ><HomePageComponent /></Route>
-          <Route path="/"  ><LoginPageComponent /></Route>
-        </Switch>
-      </Router>
+        <Route path="*"  ><LoginPageComponent /></Route>
+      </HashRouter>
     </>
   );
 }

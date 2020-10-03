@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import ImagesPath from '../assets/ImagesPath';
 
 export default class LoginPageComponent extends Component {
@@ -44,7 +45,7 @@ export default class LoginPageComponent extends Component {
                                         </label>
 
                                     </div>
-                                    <button type="button" onClick={()=> window.location.href="/home"} className="btn btn-success btn-flat m-b-30 m-t-30 font-weight-bold">Sign in</button>
+                                    <Link to="/home" className="btn btn-success btn-flat m-b-30 m-t-30 font-weight-bold">Sign in</Link>
                                     <div className="social-login-content d-none">
                                         <div className="social-button">
                                             <button type="button" className="btn social facebook btn-flat btn-addon mb-3"><i className="ti-facebook"></i>Sign in with facebook</button>
