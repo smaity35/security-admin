@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 export default class AsideComponent extends Component {
     render() {
@@ -12,7 +13,10 @@ export default class AsideComponent extends Component {
                         <div id="main-menu" className="main-menu collapse navbar-collapse">
                             <ul className="nav navbar-nav">
                                 <li>
-                                    <a href="index.html"><i className="menu-icon fa fa-laptop"></i>Dashboard </a>
+                                    <NavLink to="/home" activeClassName="active"><i className="menu-icon fa fa-laptop"></i> Dashboard </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/society" activeClassName="active"><i className="menu-icon fa fa-table"></i> Society Add </NavLink>
                                 </li>
                                 {/* <li className="menu-title">UI elements</li> */}
                                 {/*   <!-- /.menu-title --> */}

@@ -51,7 +51,7 @@ export default class NewEntryVisitor extends Component {
                             </div>
                         </div>
                         <div className="col-md-12">
-                            <button className="btn btn-primary px-5">Save</button>
+                            <button className="btn btn-primary px-5">Create</button>
                         </div>
                     </div>
                 </form>

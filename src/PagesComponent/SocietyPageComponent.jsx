@@ -1,16 +1,10 @@
+import { Button } from '@material-ui/core';
 import React, { Component } from 'react'
-import AsideComponent from '../SharedComponent/AsideComponent'
-import HeaderComponent from '../SharedComponent/HeaderComponent'
-import Button from '@material-ui/core/Button';
-
-
-
 import MainModal from '../ModalComponent/MainModal';
+import AsideComponent from '../SharedComponent/AsideComponent';
+import HeaderComponent from '../SharedComponent/HeaderComponent';
 
-
-
-
-export default class HomePageComponent extends Component {
+export default class SocietyPageComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,7 +27,6 @@ export default class HomePageComponent extends Component {
                     isDialogOpen={this.state.isModalOpen}
                     closeModal={() => this.closeModal()}
                 />
-
                 <AsideComponent />
 
                 {/* <!-- Right Panel --> */}
@@ -52,7 +45,7 @@ export default class HomePageComponent extends Component {
                                 <div className="col-sm-4">
                                     <div className="page-header float-left">
                                         <div className="page-title">
-                                            <h1>Dashboard</h1>
+                                            <h1>Society</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -91,10 +84,10 @@ export default class HomePageComponent extends Component {
                                 </div>
                                 <div className="col-auto">
                                     <button className="btn btn-primary"
-                                        onClick={() => { this.sendData(); this.setState({ modalType: 'newEntry' }) }}
+                                        onClick={() => { this.sendData(); this.setState({ modalType: 'newEntrySociety' }) }}
                                     >
-                                        <span className="material-icons align-middle"> create </span> New Entry
-                                     </button>
+                                        <span className="material-icons align-middle"> create </span> New Society
+                     </button>
                                 </div>
                             </div>
                             <div className="row">
@@ -102,65 +95,65 @@ export default class HomePageComponent extends Component {
                                 <div className="col-lg-12">
                                     <div className="card">
                                         <div className="card-header">
-                                            <strong className="card-title">Visiter Table</strong>
+                                            <strong className="card-title">Society Table</strong>
                                         </div>
                                         <div className="table-stats table-hover order-table overflow-auto">
                                             <table className="table ">
                                                 <thead>
                                                     <tr>
                                                         <th className="serial">#</th>
-                                                        <th className="text-nowrap">Entry Date</th>
-                                                        <th className="text-nowrap">Entry Time</th>
-                                                        <th className="text-nowrap">Exit Time</th>
-                                                        <th className="text-nowrap">Person Name</th>
-                                                        <th className="text-nowrap">Purpose</th>
-                                                        <th className="text-nowrap">Block</th>
-                                                        <th className="text-nowrap">Apartment</th>
+                                                        <th className="text-nowrap">Society Name</th>
+                                                        <th className="text-nowrap">Block Name</th>
+                                                        <th className="text-nowrap">Apartment Name</th>
                                                         <th className="text-nowrap">Resident Name</th>
-                                                        <th className="text-nowrap">Status</th>
                                                         <th className="text-nowrap">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td className="serial">1.</td>
-                                                        <td>02/09/2020</td>
-                                                        <td>05:10PM</td>
-                                                        <td className="text-danger">07:40PM</td>
-                                                        <td><span className="name">Rahul Sen</span> </td>
-                                                        <td><span className="product">Doctor</span> </td>
+
+
+                                                        <td><span className="name">Sunrise Society</span> </td>
                                                         <td><span className="count">D Block</span></td>
-                                                        <td><span className="count">Jamuna</span></td>
-                                                        <td><span className="count">D/2/6</span></td>
-                                                        <td><span className="count text-danger">Blocked</span></td>
-                                                        <td>
+                                                        <td><span className="count">StarLine</span></td>
+                                                        <td><span className="count">Saltlake </span></td>
+                                                        <td className="text-nowrap">
                                                             <Button color="primary"
-                                                                onClick={() => { this.sendData(); this.setState({ modalType: 'entryDetails' }) }}
+                                                                onClick={() => { this.sendData(); this.setState({ modalType: 'entryDetailsSociety' }) }}
                                                             >
                                                                 <span className="material-icons">
-                                                                    visibility
+                                                                    edit
                                                                 </span>
                                                             </Button>
+                                                            <Button color="secondary"  >
+                                                                <span className="material-icons">
+                                                                    delete
+                                                                </span>
+                                                            </Button>
+                                                           
                                                         </td>
                                                     </tr>
                                                     {[0, 1, 2, 3, 4, 5, 6].map((list, index) => (
                                                         <tr key={index}>
                                                             <td className="serial">{index + 2} .</td>
-                                                            <td>12/08/2020</td>
-                                                            <td >11:10PM</td>
-                                                            <td className="text-danger">07:40AM</td>
-                                                            <td><span className="name">Louis Stanley</span> </td>
-                                                            <td><span className="product">Doctor</span> </td>
+                                                            <td><span className="name">Sunrise Society</span> </td>
                                                             <td><span className="count">A Block</span></td>
-                                                            <td><span className="count">Sanchari</span></td>
-                                                            <td><span className="count">A/12/2</span></td>
-                                                            <td><span className="count text-success">Pass</span></td>
-                                                            <td>
-                                                                <Button color="primary" onClick={() => { this.sendData(); this.setState({ modalType: 'entryDetails' }) }} >
-                                                                    <span className="material-icons">
-                                                                        visibility
-                                                                    </span>
-                                                                </Button>
+                                                            <td><span className="count">Jamuna</span></td>
+                                                            <td><span className="count">Deun Dum </span></td>
+                                                            <td className="text-nowrap">
+                                                            <Button color="primary"
+                                                                onClick={() => { this.sendData(); this.setState({ modalType: 'entryDetailsSociety' }) }}
+                                                            >
+                                                                <span className="material-icons">
+                                                                    edit
+                                                                </span>
+                                                            </Button>
+                                                            <Button color="secondary"  >
+                                                                <span className="material-icons">
+                                                                    delete
+                                                                </span>
+                                                            </Button>
                                                             </td>
                                                         </tr>
                                                     ))}
@@ -187,7 +180,7 @@ export default class HomePageComponent extends Component {
                             <div className="row">
                                 <div className="col-sm-6">
                                     Copyright &copy; 2018 The BucketList
-                                </div>
+                </div>
 
                             </div>
                         </div>

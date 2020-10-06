@@ -1,5 +1,30 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import ImagesPath from '../assets/ImagesPath'
+
+import $ from 'jquery';
+
+$("div a").on('click', function (event) {
+    $('#left-panel').slideToggle(300);
+});
+
+// Menu Trigger
+// $('#menuToggle').on('click', function (event) {
+//     alert();
+//     var windowWidth = $(window).width();
+//     if (windowWidth < 1010) {
+//         $('body').removeClass('open');
+//         if (windowWidth < 760) {
+//             $('#left-panel').slideToggle();
+//         } else {
+//             $('#left-panel').toggleClass('open-menu');
+//         }
+//     } else {
+//         $('body').toggleClass('open');
+//         $('#left-panel').removeClass('open-menu');
+//     }
+
+// });
 
 export default class HeaderComponent extends Component {
     constructor(props) {
@@ -13,11 +38,17 @@ export default class HeaderComponent extends Component {
 
     }
     render() {
-        if (this.state.isBodyClassOpen === true) {
-            document.body.classList.add('open');
+        var windowWidth = $(window).width();
+        if (windowWidth < 1010) {
+            if (this.state.isBodyClassOpen === true) {
+                $('#left-panel').slideUp(300);
+            } else {
+                $('#left-panel').slideDown(300);
+            }
         } else {
-            document.body.classList.remove('open');
-        }
+            // $('body').toggleClass('open');
+         }
+
         return (
             <>
 
@@ -25,9 +56,10 @@ export default class HeaderComponent extends Component {
                 <header id="header" className="header">
                     <div className="top-left">
                         <div className="navbar-header">
-                            <a className="navbar-brand" href="./"><img src={ImagesPath.logo} alt="Logo" /></a>
-                            <a className="navbar-brand hidden" href="./"><img src={ImagesPath.logo2} alt="Logo" /></a>
-                            <a onClick={() => this.setState({ isBodyClassOpen: !this.state.isBodyClassOpen })} className="menutoggle"><i className="fa fa-bars"></i></a>
+                            <Link className="navbar-brand" to="/"><img src={ImagesPath.logo} alt="Logo" /></Link>
+                            <Link className="navbar-brand hidden" to="/"><img src={ImagesPath.logo2} alt="Logo" /></Link>
+                            <a onClick={() => this.setState({ isBodyClassOpen: !this.state.isBodyClassOpen })} id="menuToggle" className="menutoggle  d-md-none"><i className="fa fa-bars"></i></a>
+
                         </div>
                     </div>
                     <div className="top-right">

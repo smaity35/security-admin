@@ -2,7 +2,6 @@
   "name": "security-admin",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://smaity35.github.io/security-admin",
   "dependencies": {
     "-": "0.0.1",
     "@date-io/date-fns": "^2.10.6",
@@ -26,9 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

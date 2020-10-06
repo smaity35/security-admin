@@ -7,6 +7,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import UpdateVisitor from '../WidgetComponent/UpdateVisitor';
 import NewEntryVisitor from '../WidgetComponent/NewEntryVisitor';
+import NewSociety from '../WidgetComponent/NewSociety';
+import UpdateSociety from '../WidgetComponent/UpdateSociety';
 
 
 const MainModal = (props) => {
@@ -24,7 +26,11 @@ const MainModal = (props) => {
 
                     : props.modalType === 'entryDetails' ?
                         <DialogTitle>Visitor's Details</DialogTitle>
-                        : null
+                        : props.modalType === 'newEntrySociety' ?
+                            <DialogTitle>Add New Society</DialogTitle>
+                            : props.modalType === 'entryDetailsSociety' ?
+                                <DialogTitle>Society's Details</DialogTitle>
+                                : null
                 }
 
                 <DialogContent>
@@ -33,7 +39,11 @@ const MainModal = (props) => {
                         <NewEntryVisitor />
                         : props.modalType === 'entryDetails' ?
                             <UpdateVisitor />
-                            : null
+                            : props.modalType === 'newEntrySociety' ?
+                                <NewSociety />
+                                : props.modalType === 'entryDetailsSociety' ?
+                                    <UpdateSociety />
+                                    : null
                     }
                     <hr />
                 </DialogContent>
