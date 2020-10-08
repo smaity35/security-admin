@@ -9,6 +9,7 @@ import UpdateVisitor from '../WidgetComponent/UpdateVisitor';
 import NewEntryVisitor from '../WidgetComponent/NewEntryVisitor';
 import NewSociety from '../WidgetComponent/NewSociety';
 import UpdateSociety from '../WidgetComponent/UpdateSociety';
+import ValidateVisitor from '../WidgetComponent/ValidateVisitor';
 
 
 const MainModal = (props) => {
@@ -23,14 +24,15 @@ const MainModal = (props) => {
             >
                 {props.modalType === 'newEntry' ?
                     <DialogTitle>Add New visitor</DialogTitle>
-
                     : props.modalType === 'entryDetails' ?
                         <DialogTitle>Visitor's Details</DialogTitle>
                         : props.modalType === 'newEntrySociety' ?
                             <DialogTitle>Add New Society</DialogTitle>
                             : props.modalType === 'entryDetailsSociety' ?
                                 <DialogTitle>Society's Details</DialogTitle>
-                                : null
+                                : props.modalType === 'validateVisitor' ?
+                                    <DialogTitle>Validate Visitor</DialogTitle>
+                                    : null
                 }
 
                 <DialogContent>
@@ -43,7 +45,9 @@ const MainModal = (props) => {
                                 <NewSociety />
                                 : props.modalType === 'entryDetailsSociety' ?
                                     <UpdateSociety />
-                                    : null
+                                    : props.modalType === 'validateVisitor' ?
+                                        <ValidateVisitor />
+                                        : null
                     }
                     <hr />
                 </DialogContent>

@@ -41,7 +41,7 @@ export default class LoginPageComponent extends Component {
                                             <input type="checkbox" /> Remember Me
                             </label>
                                         <label className="pull-right">
-                                            <a href="#">Forgotten Password?</a>
+                                            <Link to="/">Forgotten Password?</Link>
                                         </label>
 
                                     </div>

@@ -47,7 +47,7 @@ export default class HeaderComponent extends Component {
             }
         } else {
             // $('body').toggleClass('open');
-         }
+        }
 
         return (
             <>
@@ -150,7 +150,7 @@ export default class HeaderComponent extends Component {
 
                                     <a className="nav-link" href="#"><i className="fa fa-cog"></i>Settings</a> */}
 
-                                    <a className="nav-link" href="#"><i className="fa fa-power-off"></i>Logout</a>
+                                    <Link className="nav-link" to="/"><i className="fa fa-power-off"></i>Logout</Link>
                                 </div>
                             </div>
                         </div>

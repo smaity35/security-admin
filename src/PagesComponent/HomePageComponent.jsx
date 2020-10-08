@@ -77,7 +77,10 @@ export default class HomePageComponent extends Component {
                     <div className="content min-vh-100">
                         <div className="animated fadeIn">
                             <div className="row pb-4 justify-content-between">
-                                <div className="col col-md-8 col-lg-6">
+                                <div className="col-auto">
+                                    <button className="btn btn-primary" onClick={() => { this.sendData(); this.setState({ modalType: 'validateVisitor' }) }}> Validate Visitor</button>
+                                </div>
+                                <div className="col col-md-8 col-lg-6 d-none">
                                     <div className="input-group">
 
 
@@ -102,7 +105,7 @@ export default class HomePageComponent extends Component {
                                 <div className="col-lg-12">
                                     <div className="card">
                                         <div className="card-header">
-                                            <strong className="card-title">Visiter Table</strong>
+                                            <strong className="card-title">Visitor Table</strong>
                                         </div>
                                         <div className="table-stats table-hover order-table overflow-auto">
                                             <table className="table ">
@@ -113,11 +116,13 @@ export default class HomePageComponent extends Component {
                                                         <th className="text-nowrap">Entry Time</th>
                                                         <th className="text-nowrap">Exit Time</th>
                                                         <th className="text-nowrap">Person Name</th>
-                                                        <th className="text-nowrap">Purpose</th>
+
                                                         <th className="text-nowrap">Block</th>
-                                                        <th className="text-nowrap">Apartment</th>
                                                         <th className="text-nowrap">Resident Name</th>
+                                                        <th className="text-nowrap">Apartment</th>
+
                                                         <th className="text-nowrap">Status</th>
+                                                        <th className="text-nowrap">Purpose</th>
                                                         <th className="text-nowrap">Action</th>
                                                     </tr>
                                                 </thead>
@@ -128,11 +133,12 @@ export default class HomePageComponent extends Component {
                                                         <td>05:10PM</td>
                                                         <td className="text-danger">07:40PM</td>
                                                         <td><span className="name">Rahul Sen</span> </td>
-                                                        <td><span className="product">Doctor</span> </td>
+
                                                         <td><span className="count">D Block</span></td>
-                                                        <td><span className="count">Jamuna</span></td>
+                                                        <td><span className="count">Jamuna Sen</span></td>
                                                         <td><span className="count">D/2/6</span></td>
                                                         <td><span className="count text-danger">Blocked</span></td>
+                                                        <td><span className="product">Doctor</span> </td>
                                                         <td>
                                                             <Button color="primary"
                                                                 onClick={() => { this.sendData(); this.setState({ modalType: 'entryDetails' }) }}
@@ -150,11 +156,12 @@ export default class HomePageComponent extends Component {
                                                             <td >11:10PM</td>
                                                             <td className="text-danger">07:40AM</td>
                                                             <td><span className="name">Louis Stanley</span> </td>
-                                                            <td><span className="product">Doctor</span> </td>
+
                                                             <td><span className="count">A Block</span></td>
-                                                            <td><span className="count">Sanchari</span></td>
+                                                            <td><span className="count">Sanchari Roy</span></td>
                                                             <td><span className="count">A/12/2</span></td>
                                                             <td><span className="count text-success">Pass</span></td>
+                                                            <td><span className="product">Food Delivery</span> </td>
                                                             <td>
                                                                 <Button color="primary" onClick={() => { this.sendData(); this.setState({ modalType: 'entryDetails' }) }} >
                                                                     <span className="material-icons">
